@@ -1,7 +1,6 @@
 package com.ruveyda.entity;
 
-import com.ruveyda.entity.enums.ECylinders;
-import com.ruveyda.entity.superclasses.Engine;
+
 import com.ruveyda.entity.enums.ECylinders;
 import com.ruveyda.entity.superclasses.Engine;
 import jakarta.persistence.*;

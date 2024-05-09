@@ -1,10 +1,6 @@
 package com.ruveyda.entity.superclasses;
 
 import com.ruveyda.entity.enums.*;
-import com.ruveyda.entity.enums.EBodyType;
-import com.ruveyda.entity.enums.EBrand;
-import com.ruveyda.entity.enums.EColor;
-import com.ruveyda.entity.enums.EDrivetrainType;
 import jakarta.persistence.*;
 import lombok.*;
 import lombok.experimental.SuperBuilder;
@@ -17,12 +13,13 @@ import lombok.experimental.SuperBuilder;
 @MappedSuperclass
 public class Car extends BaseEntity {
 
-//    private Long carId;
+
     @Enumerated(EnumType.STRING)
     private EBrand brand;
+    @Column(nullable = false)
     private String model;
     @Enumerated(EnumType.STRING)
-    private EColor color; //diger denilebilir (tanimlanmamislar icin)
+    private EColor color;
     private Integer year;
     private Double price;
     @Builder.Default
@@ -37,6 +34,7 @@ public class Car extends BaseEntity {
     @Column(name = "top_speed_km/h")
     private Double topSpeed;
     private String carCode;
+    @Enumerated(EnumType.STRING)
     @Builder.Default
-    private Boolean isSold = false;
+    private EStatus status = EStatus.ON_SHOWROOM;
 }

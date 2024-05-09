@@ -1,10 +1,5 @@
 package com.ruveyda.entity.enums;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-
-@AllArgsConstructor
-@Getter
 public enum EColor {
     BLACK,
     WHITE,
@@ -21,6 +16,4 @@ public enum EColor {
     PINK,
     BEIGE,
     OTHER
-
-
 }

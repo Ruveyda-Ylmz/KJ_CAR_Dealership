@@ -3,13 +3,11 @@ package com.ruveyda.entity;
 import com.ruveyda.entity.enums.ECarType;
 import com.ruveyda.entity.superclasses.BaseEntity;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import lombok.experimental.SuperBuilder;
 
 @Data
+@EqualsAndHashCode(callSuper = true)
 @NoArgsConstructor
 @AllArgsConstructor
 @SuperBuilder
@@ -23,7 +21,6 @@ public class Order extends BaseEntity {
     private String carCode;
     private ECarType carType;
     private Long customerId;
-
     //TODO DTO'da bunlar verilecek.
 //    private String buyersName;
 //    private String buyersSurname;
@@ -51,5 +48,4 @@ public class Order extends BaseEntity {
 //
 //    @Column(nullable = false)
 //    private String country;
-
 }

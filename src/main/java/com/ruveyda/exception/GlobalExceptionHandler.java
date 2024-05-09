@@ -1,5 +1,7 @@
 package com.ruveyda.exception;
 
+
+
 import com.fasterxml.jackson.databind.exc.InvalidFormatException;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.http.HttpStatus;
@@ -16,6 +18,7 @@ import java.util.List;
 
 @ControllerAdvice
 public class GlobalExceptionHandler {
+
     @ExceptionHandler(CarDealershipException.class)
     @ResponseBody
     public ResponseEntity<ErrorMessage> handleManagerException(CarDealershipException exception){
@@ -90,4 +93,6 @@ public class GlobalExceptionHandler {
                 .message(message)
                 .build();
     }
+
+
 }

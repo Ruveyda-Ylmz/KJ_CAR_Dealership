@@ -1,7 +1,6 @@
 package com.ruveyda.entity;
 
 import com.ruveyda.entity.superclasses.Car;
-import com.ruveyda.entity.superclasses.Car;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -21,6 +20,7 @@ public class HybridCar extends Car {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
 
     private Long electricEngineId;
 

@@ -1,6 +1,5 @@
 package com.ruveyda.entity.enums;
 
-import jakarta.persistence.GeneratedValue;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 
@@ -13,7 +12,8 @@ public enum EBrand {
     AUDI("AU"),
     BENTLEY("BE"),
     BMW("BM"),
-    BUICK("BU"),
+    BUGATTI("BU"),
+    BUICK("BI"),
     CADILLAC("CA"),
     CHEVROLET("CH"),
     CHRYSLER("CR"),
@@ -34,6 +34,7 @@ public enum EBrand {
     LEXUS("LE"),
     LINCOLN("LI"),
     LOTUS("LO"),
+    LUCID("LU"),
     MASERATI("MA"),
     MAZDA("MZ"),
     MCLAREN("MC"),
@@ -41,9 +42,11 @@ public enum EBrand {
     MINI("MI"),
     MITSUBISHI("MT"),
     NISSAN("NI"),
-    PEUGEOT("PE"),
+    POLESTAR("PL"),
     PORSCHE("PO"),
     RAM("RA"),
+    RIMAC("RM"),
+    RIVIAN("RI"),
     ROLLS_ROYCE("RR"),
     SAAB("SA"),
     SUBARU("SU"),

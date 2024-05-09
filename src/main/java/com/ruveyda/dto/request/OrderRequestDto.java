@@ -1,4 +1,4 @@
-package com.ruveyda.dto;
+package com.ruveyda.dto.request;
 
 import com.ruveyda.entity.enums.ECarType;
 import jakarta.validation.constraints.Email;
@@ -12,19 +12,28 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Builder
 public class OrderRequestDto {
+
+    //Car info
     private String carCode;
     private ECarType carType;
-    private String buyersName;
-    private String buyersSurname;
-    private String buyersIdNumber;
+
+    //Customer info
+    private String customerName;
+    private String customerSurname;
+    private String customersIdNumber;
     @Email
-    private String buyersEmail;
-    private String buyersPhoneNumber;
+    private String customersEmail;
+    private String customersPhoneNumber;
+
+    //Payment info
     private Double transactedAmount;
 
+    //Address info
     private String street;
     private String city;
     private String apartmentNo;
     private String postalCode;
     private String country;
+
+
 }

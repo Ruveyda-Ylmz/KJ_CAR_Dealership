@@ -3,7 +3,7 @@ package com.ruveyda.exception;
 import lombok.Getter;
 
 @Getter
-public class CarDealershipException extends RuntimeException {
+public class CarDealershipException extends RuntimeException{
 
     private final ErrorType errorType;
 

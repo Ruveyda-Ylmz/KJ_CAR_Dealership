@@ -1,7 +1,10 @@
 package com.ruveyda.service;
 
 import com.ruveyda.entity.Address;
+import com.ruveyda.entity.Customer;
 import com.ruveyda.repository.AddressRepository;
+import com.ruveyda.repository.CustomerRepository;
+import com.ruveyda.utility.ServiceManager;
 import com.ruveyda.utility.ServiceManager;
 import org.springframework.stereotype.Service;
 
@@ -13,4 +16,7 @@ public class AddressService extends ServiceManager<Address,Long> {
         super(addressRepository);
         this.addressRepository = addressRepository;
     }
+
+
+
 }
