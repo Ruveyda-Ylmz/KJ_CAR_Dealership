@@ -17,12 +17,15 @@ import lombok.experimental.SuperBuilder;
 @MappedSuperclass
 public class Engine extends BaseEntity {
 
+
     private String name;
     @Column(name = "horse_power_hp")
     private Long horsePower;
     @Column(name = "torque_Nm")
     private Double torque;
+    @Enumerated(EnumType.STRING)
     private EFuelType fuelType;
+    @Enumerated(EnumType.STRING)
     private EBrand brand;
 
 

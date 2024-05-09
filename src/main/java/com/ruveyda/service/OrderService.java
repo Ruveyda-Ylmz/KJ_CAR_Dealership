@@ -1,6 +1,6 @@
 package com.ruveyda.service;
 
-import com.ruveyda.dto.request.OrderRequestDto;
+import com.ruveyda.dto.OrderRequestDto;
 import com.ruveyda.entity.Address;
 import com.ruveyda.entity.Address_Customer;
 import com.ruveyda.entity.Customer;

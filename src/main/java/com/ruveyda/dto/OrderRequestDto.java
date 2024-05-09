@@ -1,7 +1,8 @@
-package com.ruveyda.dto.request;
+package com.ruveyda.dto;
 
 import com.ruveyda.entity.enums.ECarType;
 import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -12,7 +13,6 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Builder
 public class OrderRequestDto {
-
     //Car info
     private String carCode;
     private ECarType carType;
@@ -26,6 +26,10 @@ public class OrderRequestDto {
     private String customersPhoneNumber;
 
     //Payment info
+    private String creditCardNo;
+    private String CreditCarExpirationDate;
+    @Size(min = 3,max = 3)
+    private String cvc;
     private Double transactedAmount;
 
     //Address info
@@ -34,6 +38,4 @@ public class OrderRequestDto {
     private String apartmentNo;
     private String postalCode;
     private String country;
-
-
 }

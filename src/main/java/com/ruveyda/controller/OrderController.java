@@ -1,9 +1,7 @@
 package com.ruveyda.controller;
 
-import com.ruveyda.dto.request.OrderRequestDto;
-import com.ruveyda.entity.ElectricCar;
+import com.ruveyda.dto.OrderRequestDto;
 import com.ruveyda.entity.Order;
-import com.ruveyda.entity.superclasses.Car;
 import com.ruveyda.service.OrderService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;

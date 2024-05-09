@@ -1,6 +1,6 @@
 package com.ruveyda.mapper;
 
-import com.ruveyda.dto.request.OrderRequestDto;
+import com.ruveyda.dto.OrderRequestDto;
 import com.ruveyda.entity.Order;
 import org.mapstruct.Mapper;
 import org.mapstruct.ReportingPolicy;
