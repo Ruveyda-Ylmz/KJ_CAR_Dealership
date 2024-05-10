@@ -2,6 +2,7 @@ package com.ruveyda.dto;
 
 import com.ruveyda.entity.enums.ECarType;
 import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -20,22 +21,28 @@ public class OrderRequestDto {
     //Customer info
     private String customerName;
     private String customerSurname;
-    private String customersIdNumber;
+    private String customerCitizenshipId;
     @Email
     private String customersEmail;
     private String customersPhoneNumber;
 
     //Payment info
+    @NotBlank
+    private String ownersName;
+    @NotBlank
+    private String ownersSurname;
+    @Size(min = 16,max = 16)
     private String creditCardNo;
-    private String CreditCarExpirationDate;
+    @Size(min = 5,max = 5)
+    private String creditCardExpirationDate; //TODO Date formatter ile değiştirilebilir.
     @Size(min = 3,max = 3)
     private String cvc;
-    private Double transactedAmount;
+    private Double paymentAmount;
 
     //Address info
     private String street;
     private String city;
     private String apartmentNo;
     private String postalCode;
-    private String country;
+    private Long countryId;
 }

@@ -19,6 +19,6 @@ public class ElectricEngine extends Engine {
     private Long id;
 
     @Column(name = "charging_time_m")
-    private Integer chargingTime;
+    private Integer chargingTime; //şarj süresi
 
 }

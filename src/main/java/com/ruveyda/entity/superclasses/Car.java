@@ -13,7 +13,6 @@ import lombok.experimental.SuperBuilder;
 @MappedSuperclass
 public class Car extends BaseEntity {
 
-
     @Enumerated(EnumType.STRING)
     private EBrand brand;
     @Column(nullable = false)

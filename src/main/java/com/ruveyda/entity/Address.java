@@ -19,7 +19,7 @@ public class Address extends BaseEntity {
     private Long id;
     
     @Column(nullable = false)
-    private String street;
+    private String street; //sokak
     
     @Column(nullable = false)
     private String city;
@@ -31,7 +31,7 @@ public class Address extends BaseEntity {
     private String postalCode;
     
     @Column(nullable = false)
-    private Long countryId;
+    private Long countryId; //ülke kimliği
 
     @Builder.Default
     private Boolean isAddressVerified = false;

@@ -1,18 +1,20 @@
 package com.ruveyda.entity;
 
+import com.ruveyda.entity.superclasses.BaseEntity;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.experimental.SuperBuilder;
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Builder
-@Table(name = "tbl_country")
+@SuperBuilder
+@Table(name = "tbl_country") //ülke
 @Entity
-public class Country {
+public class Country extends BaseEntity {
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -25,13 +27,13 @@ public class Country {
     private String isoCode;
     
     @Column(nullable = false)
-    private String capital;
+    private String capital; //başkent
     
     @Column(nullable = false)
-    private String continent;
+    private String continent; //kıta
     
     @Column(nullable = false)
-    private String region;
+    private String region; //bölge
     
 
     

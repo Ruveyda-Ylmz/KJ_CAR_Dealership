@@ -11,6 +11,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Builder
 public class CarCreateRequestDto {
+
     private Long electricEngineId;
     private Long internalCombustionEngineId;
     private Double batteryCapacity;

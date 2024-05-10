@@ -20,10 +20,10 @@ public class FuelCar extends Car {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private Long internalCombustionEngineId;
+    private Long internalCombustionEngineId;  //dahili Yanma Motoru Kimliği
     @Column(name = "fuel_capacity_L")
     private Double fuelCapacity;
     @Column(name = "fuel_consumption_L/km")
-    private Double fuelConsumption;
+    private Double fuelConsumption; //Yakıt tüketimi
 
 }

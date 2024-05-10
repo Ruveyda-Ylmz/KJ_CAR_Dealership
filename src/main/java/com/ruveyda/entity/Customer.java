@@ -11,7 +11,7 @@ import lombok.experimental.SuperBuilder;
 @NoArgsConstructor
 @AllArgsConstructor
 @SuperBuilder
-@Table(name = "tbl_customer")
+@Table(name = "tbl_customer") //müşteri
 @Entity
 public class Customer extends BaseEntity {
     @Id
@@ -19,11 +19,10 @@ public class Customer extends BaseEntity {
     private Long id;
     private String customerName;
     private String customerSurname;
-    private String customersIdNumber;
+    private String customerCitizenshipId; //müşteri vatandaşlık kimliği
     @Email
     private String customersEmail;
     private String customersPhoneNumber;
     @Builder.Default
-    private Boolean isCustomerVerified = false;
-    //TODO Address ile Customer arasında normalizasyon yapılacak. DONE
+    private Boolean isCustomerVerified = false; //MüşteriDoğrulandı
 }

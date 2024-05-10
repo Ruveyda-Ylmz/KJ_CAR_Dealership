@@ -26,4 +26,5 @@ public class ElectricCar extends Car {
     private Double energyConsumption;
 
 
+
 }

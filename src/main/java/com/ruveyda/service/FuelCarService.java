@@ -11,6 +11,7 @@ import com.ruveyda.utility.ServiceManager;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class FuelCarService extends ServiceManager<FuelCar,Long> {
@@ -27,6 +28,10 @@ public class FuelCarService extends ServiceManager<FuelCar,Long> {
         String batchNumber = CarCodeGenerator.generateBatchNumber();
         fuelCarList.forEach(car -> car.setCarCode(CarCodeGenerator.generateCarCode(batchNumber,car)));
         return (List<FuelCar>) saveAll(fuelCarList);
+    }
+
+    public Optional<FuelCar> findByCarCode(String carCode){
+        return fuelCarRepository.findByCarCode(carCode);
     }
 }
 
